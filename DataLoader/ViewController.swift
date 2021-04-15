@@ -12,6 +12,7 @@ import SPTDataLoader
 var service = SPTDataLoaderService.init()
 var sptRequest = SPTDataLoaderRequest.init()
 var loader = SPTDataLoader.init()
+var factory = SPTDataLoaderFactory()
 
 
 class ViewController: UIViewController {
@@ -22,7 +23,7 @@ class ViewController: UIViewController {
 //    var service = SPTDataLoaderService.init()
 //    var sptRequest = SPTDataLoaderRequest.init()
 //    var response = SPTDataLoaderResponse.init()
-    var factory = SPTDataLoaderFactory()
+    
     
     
 
@@ -58,16 +59,16 @@ class ViewController: UIViewController {
 
 extension ViewController: SPTDataLoaderDelegate {
     func dataLoader(_ dataLoader: SPTDataLoader, didReceiveSuccessfulResponse response: SPTDataLoaderResponse) {
-        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+//        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
 //            if let _ = error {
 //                errorHandler(AppError.badStatusCode)
 //            }
-            print("bad status code")
-            return
-        }
-        print(response)
-//        let json = String(data: response.body ?? Data(), encoding: .utf8)
-//        print(json)
+//            print("bad status code")
+//            return
+//        }
+        //print(response)
+        let json = String(data: response.body ?? Data(), encoding: .utf8)
+        print(json)
         
         //print(response.body)
         //print("received successful response")
