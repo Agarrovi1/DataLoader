@@ -1,0 +1,990 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		009F3783D8E5B37DC93AE90923F9926E /* SPTDataLoaderRateLimiter.h in Headers */ = {isa = PBXBuildFile; fileRef = E481CF4269B9FE011B791D4D1B94C747 /* SPTDataLoaderRateLimiter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		028186FA7AC8EFB60CCCB9EEE144FE89 /* SPTDataLoaderCancellationToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 053D9F8A9292A2EDEB1B87444E4BA723 /* SPTDataLoaderCancellationToken.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D0C839E1E4325CAC1A80565DF4DACBB /* SPTDataLoaderImplementation+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B2C7301BE91E8E0A7AB0B0D6F0150814 /* SPTDataLoaderImplementation+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0E003054B7F4CD99B01B2C372C58E346 /* SPTDataLoaderService.h in Headers */ = {isa = PBXBuildFile; fileRef = 9925D140702BC6DC36E8149012867EC8 /* SPTDataLoaderService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C5AC4561AD857851BCF19F15997BB4A /* SPTDataLoaderExponentialTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = F79ADD1F0EF1B441F587AE52F5ED5A77 /* SPTDataLoaderExponentialTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		245D1715F8C5215DFC2765129DA05272 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B2A0B779CE31153B2C0D8A7F8DC7FE /* Security.framework */; };
+		2B077562291BD169704BBB4E7142022A /* SPTDataLoaderRequestTaskHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = CE3014388DB0967FB1DF84DE58A65DC2 /* SPTDataLoaderRequestTaskHandler.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2C0F97DC9C69080AD58D6913D4D525C2 /* SPTDataLoaderResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B07D14C0D53C8271840C98373D96C972 /* SPTDataLoaderResponse.m */; };
+		335237FD28C4A74CE813ED463C093FF5 /* SPTDataLoaderRequestTaskHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EE8BB7935BF641A25F6E0F0D512599 /* SPTDataLoaderRequestTaskHandler.m */; };
+		34386C71A1737AE9EEA6336C4283257B /* SPTDataLoaderServerTrustPolicy+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 907C826C7F74B16CF71829B779326879 /* SPTDataLoaderServerTrustPolicy+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		361E20941BDD87DE97B0EEB8A675A504 /* NSDictionary+HeaderSize.h in Headers */ = {isa = PBXBuildFile; fileRef = EC80290F8DBA69DD79505FAB6FB49618 /* NSDictionary+HeaderSize.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3677304EF8A2F96FD712ED75795AC03F /* NSDictionary+HeaderSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 327F7DC24946CAEB72A479C3910C9519 /* NSDictionary+HeaderSize.m */; };
+		3733EBACBA37F500E477887A8E2CDC5F /* Pods-DataLoader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DAB90DAFDEB8167C413861AD4FA16E36 /* Pods-DataLoader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B2F4E33CDDD8DB6F58BD8A76BFA3404 /* SPTDataLoaderServiceSessionSelector.h in Headers */ = {isa = PBXBuildFile; fileRef = F61B89D172B344BA4DF0FC8C1F81D498 /* SPTDataLoaderServiceSessionSelector.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3DCFD425C916C2CE2446D2F4900DEDC6 /* SPTDataLoaderFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EE3C4A8FD9E0956BD85C0AD5F913A12 /* SPTDataLoaderFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		419F9D934D68EB830D0B451241CE73F6 /* SPTDataLoaderConsumptionObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 58AEA5952A49E5159B065954E765C6C0 /* SPTDataLoaderConsumptionObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44A84AA0136E48A5F308657236CC5644 /* SPTDataLoaderServiceSessionSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C5073F5034A98D9A621D713669DD6E /* SPTDataLoaderServiceSessionSelector.m */; };
+		4AD93AD664378659B1038715EB117F8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */; };
+		5D2761A502722B2002BF4830835BCB09 /* SPTDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6005A8D4E0C8416BFDA24376D61CFEAC /* SPTDataLoader.m */; };
+		5F7EBCC8E5C6D9A34F89276DF02A70E8 /* SPTDataLoaderTimeProviderImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = 160CAB7EC5919585E151A57A4D259DF0 /* SPTDataLoaderTimeProviderImplementation.m */; };
+		612D2B486DF94B38FB37F298236641B8 /* SPTDataLoader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 467A16658E56FFA6E9F04F8847A9D360 /* SPTDataLoader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61FBD44CF5E83BA9404A62C2298EB1A0 /* SPTDataLoaderService.m in Sources */ = {isa = PBXBuildFile; fileRef = BE806706372FAD281E355C9AF3D5F3D2 /* SPTDataLoaderService.m */; };
+		6924BFFF4D106693E3D73A4A3D473FF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */; };
+		6BF45B0E7C375290A2EA0E8E0329D2F1 /* SPTDataLoaderRateLimiter.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E2A4256A8FB4133617A7E006A833BB /* SPTDataLoaderRateLimiter.m */; };
+		6E4623E48ADB194EB05D4C5A14B8D9AA /* SPTDataLoaderCancellationTokenFactoryImplementation.h in Headers */ = {isa = PBXBuildFile; fileRef = 469B79C6344A8FE5CF129849EC6486F5 /* SPTDataLoaderCancellationTokenFactoryImplementation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6E5ECB6F03B65E57BC18E90647E5D357 /* SPTDataLoaderImplementation.h in Headers */ = {isa = PBXBuildFile; fileRef = ACA7AE8AA7A1A45199E8DB1D95FFEF0C /* SPTDataLoaderImplementation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72F009315D8E350AFA9AC8DEECD540CE /* SPTDataLoaderCancellationTokenFactoryImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B63F4FEC9EA2BD89242E5A4E20D247E /* SPTDataLoaderCancellationTokenFactoryImplementation.m */; };
+		78CF90B1422BC6DF42FB1CF5FD3EE04F /* SPTDataLoaderTimeProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 164C862E6EB25A1548685102FD5E910F /* SPTDataLoaderTimeProvider.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		78F1F8D2506195C10C24EFA53CCFB564 /* SPTDataLoaderResolverAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AF22AC196E736C1AA8D4C24D9543E9 /* SPTDataLoaderResolverAddress.m */; };
+		7920C6FA6E1BC8F159C2E142EC8F98DC /* SPTDataLoader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A4373438D10C4741414FA94F21F6E6 /* SPTDataLoader-dummy.m */; };
+		79625C46D600B8984E7BFB3E947902F6 /* SPTDataLoaderAuthoriser.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EBC0D9A5AA879F87C1112192E2D682F /* SPTDataLoaderAuthoriser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7FBB9C46D0F0576C7A208386A88C0482 /* Pods-DataLoaderTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3953B2352C1CAD9A22C57C7D0C3F0ED2 /* Pods-DataLoaderTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84430D887B7B5DA09A5D6DFB14888EF1 /* SPTDataLoaderExponentialTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = C65C1884D7837B93881D16168CFCC70B /* SPTDataLoaderExponentialTimer.m */; };
+		8FA87737A2DADDBD35FE87E0D71E4C4C /* SPTDataLoaderFactory+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = E26871A6E31AF3B353C265C69644D945 /* SPTDataLoaderFactory+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		905EDD32727A4B56E7A78F5BEE0D2254 /* SPTDataLoaderDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = F426680B6BDB5A88A088285C4D9D7EB4 /* SPTDataLoaderDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92C542C7EB385C8778B5F75C64A8F499 /* SPTDataLoaderRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 732EF66FB3F007B6FCC0625C1E375E96 /* SPTDataLoaderRequest.m */; };
+		99EA6870DE9A9B0F7EF39470B4E0F666 /* SPTDataLoaderCancellationTokenImplementation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0574D2F86C40FACDCB32EFAA52AC0C3E /* SPTDataLoaderCancellationTokenImplementation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A3049EEADCD7650BB9E9BEFC9C546E01 /* SPTDataLoaderResolverAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = 60C713BB9D18631ADDAA8EE14F2F5509 /* SPTDataLoaderResolverAddress.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A92D094B91E75ECBECC391AF487C8D3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */; };
+		AD7B02B7DB87136FC8B422DAC1DC3B44 /* SPTDataLoaderCancellationTokenFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = BEDCAD63B5E79FD751E9EFC3403DB121 /* SPTDataLoaderCancellationTokenFactory.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B8B2AD055C37B6C6DF70DFBFD4E6DAF5 /* SPTDataLoaderTimeProviderImplementation.h in Headers */ = {isa = PBXBuildFile; fileRef = E62789F99A507967B34192ABA0469E78 /* SPTDataLoaderTimeProviderImplementation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C7DF41949E340C0863CB428B00CA2185 /* SPTDataLoaderFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 642EC73C6B49E71FD22F622B73A281E9 /* SPTDataLoaderFactory.m */; };
+		C86310914C9360BBFC8BEE8482008EA4 /* SPTDataLoaderRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 51BD5430BCECF81EC22D1EE313D50EAE /* SPTDataLoaderRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D475F2D60FDA3CE489D1217B407D316E /* SPTDataLoaderCancellationTokenImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = B23766E0D610460E458512A0E6FD4B4F /* SPTDataLoaderCancellationTokenImplementation.m */; };
+		D70EC4DB8F23A27126F859C49E6FACB7 /* SPTDataLoaderService+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = BEB5C70573BDA09A3E08909A8D869750 /* SPTDataLoaderService+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DD8FD6DB7C03F6FD99F321029388F84A /* SPTDataLoaderRateLimiter+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = DD803D9F15CC7318E2778740F358DBE9 /* SPTDataLoaderRateLimiter+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DE1295708F34C65EF1FFA613A61947C8 /* SPTDataLoaderResponse+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CC11D2E6931284F567244923952DC9A /* SPTDataLoaderResponse+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DFAA408FE8045C02586F2C0C5F26A986 /* SPTDataLoaderResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = CC1BE0EBCA18297E064A887D01DC65F3 /* SPTDataLoaderResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0B92057ABF7C1B1B04938B1CC0D8D63 /* SPTDataLoaderRequestResponseHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = E80E8A77E188E928FF688A9C0D98A143 /* SPTDataLoaderRequestResponseHandler.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E13E2D8C85F266E2220EFC8BE5C9CD47 /* SPTDataLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = C8EA80B3EACDE59AC9097FA679BBDE34 /* SPTDataLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5F8FC813A88190FA9B5A4707EF30810 /* SPTDataLoaderServerTrustPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = D99FB6C34CDB2199CB06A9AC29E948B6 /* SPTDataLoaderServerTrustPolicy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E739A68D338980064E907F9FDAD293F4 /* Pods-DataLoaderTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7048819A145EBF307A0B5EE7B223BD /* Pods-DataLoaderTests-dummy.m */; };
+		EE1B2011EAE6EC424EC0AF3886A32AB0 /* SPTDataLoaderServerTrustPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B201BC22120FD0DD335ECC1DFA93ED1 /* SPTDataLoaderServerTrustPolicy.m */; };
+		F086C9EF0B56626F05F0441AB14D14F9 /* Pods-DataLoader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 546F98656A949D1504A225D8FA6B8854 /* Pods-DataLoader-dummy.m */; };
+		F792B0FA8BEEC198181B3762A7676E94 /* SPTDataLoaderBlockWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 960A2600B1244B5619D91D29C051ED2B /* SPTDataLoaderBlockWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8B34FF2ECC7A8C1856CBFB1AC374459 /* SPTDataLoaderResolver.h in Headers */ = {isa = PBXBuildFile; fileRef = E67A0FE3E9A5EC149FD1DDC8CF5A8CBF /* SPTDataLoaderResolver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAEAA7E36215FBE1D6469E580E04C798 /* SPTDataLoaderRequest+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = AEEF9B4EE20784CF85567978A008DF40 /* SPTDataLoaderRequest+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FCD333E8982FAC990FE84E8B1E8ED759 /* SPTDataLoaderResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = F9182D110FAEC0D8DF3B13C9C3324FAE /* SPTDataLoaderResolver.m */; };
+		FD1EA8D6EECC5E909E1002E7E59003AA /* SPTDataLoaderBlockWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 015A313D168DBD3144C247EDBD62D274 /* SPTDataLoaderBlockWrapper.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4130F9D558A53C4208C6BCED9A6E0920 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD0C06C602609FC3AAF02D6F10FB00B7;
+			remoteInfo = "Pods-DataLoader";
+		};
+		D4D1ECA7AA0D30F80B07D282AD29580E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2643A53B5099AF7B63FE53378462A695;
+			remoteInfo = SPTDataLoader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		015A313D168DBD3144C247EDBD62D274 /* SPTDataLoaderBlockWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTDataLoaderBlockWrapper.m; path = Sources/SPTDataLoader/SPTDataLoaderBlockWrapper.m; sourceTree = "<group>"; };
+		01B8D186BCE0F152393F675905BBFD21 /* Pods-DataLoader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DataLoader.debug.xcconfig"; sourceTree = "<group>"; };
+		053D9F8A9292A2EDEB1B87444E4BA723 /* SPTDataLoaderCancellationToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderCancellationToken.h; path = include/SPTDataLoader/SPTDataLoaderCancellationToken.h; sourceTree = "<group>"; };
+		0574D2F86C40FACDCB32EFAA52AC0C3E /* SPTDataLoaderCancellationTokenImplementation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderCancellationTokenImplementation.h; path = Sources/SPTDataLoader/SPTDataLoaderCancellationTokenImplementation.h; sourceTree = "<group>"; };
+		0B63F4FEC9EA2BD89242E5A4E20D247E /* SPTDataLoaderCancellationTokenFactoryImplementation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTDataLoaderCancellationTokenFactoryImplementation.m; path = Sources/SPTDataLoader/SPTDataLoaderCancellationTokenFactoryImplementation.m; sourceTree = "<group>"; };
+		0CC11D2E6931284F567244923952DC9A /* SPTDataLoaderResponse+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SPTDataLoaderResponse+Private.h"; path = "Sources/SPTDataLoader/SPTDataLoaderResponse+Private.h"; sourceTree = "<group>"; };
+		160CAB7EC5919585E151A57A4D259DF0 /* SPTDataLoaderTimeProviderImplementation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTDataLoaderTimeProviderImplementation.m; path = Sources/SPTDataLoader/SPTDataLoaderTimeProviderImplementation.m; sourceTree = "<group>"; };
+		164C862E6EB25A1548685102FD5E910F /* SPTDataLoaderTimeProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderTimeProvider.h; path = Sources/SPTDataLoader/SPTDataLoaderTimeProvider.h; sourceTree = "<group>"; };
+		1D81357A209B730956DC632E55424BED /* Pods-DataLoader-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DataLoader-frameworks.sh"; sourceTree = "<group>"; };
+		20DCF9D0B9262BE4991CA6ABB12E4458 /* SPTDataLoader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SPTDataLoader.modulemap; sourceTree = "<group>"; };
+		20EE8BB7935BF641A25F6E0F0D512599 /* SPTDataLoaderRequestTaskHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTDataLoaderRequestTaskHandler.m; path = Sources/SPTDataLoader/SPTDataLoaderRequestTaskHandler.m; sourceTree = "<group>"; };
+		214EDE5938715E5A0B35B07A4338D21E /* Pods-DataLoaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DataLoaderTests.release.xcconfig"; sourceTree = "<group>"; };
+		292FDB5F4DDD2414D74C3E79575B20D2 /* Pods-DataLoader-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DataLoader-acknowledgements.plist"; sourceTree = "<group>"; };
+		327F7DC24946CAEB72A479C3910C9519 /* NSDictionary+HeaderSize.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+HeaderSize.m"; path = "Sources/SPTDataLoader/NSDictionary+HeaderSize.m"; sourceTree = "<group>"; };
+		38AF22AC196E736C1AA8D4C24D9543E9 /* SPTDataLoaderResolverAddress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTDataLoaderResolverAddress.m; path = Sources/SPTDataLoader/SPTDataLoaderResolverAddress.m; sourceTree = "<group>"; };
+		3953B2352C1CAD9A22C57C7D0C3F0ED2 /* Pods-DataLoaderTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DataLoaderTests-umbrella.h"; sourceTree = "<group>"; };
+		467A16658E56FFA6E9F04F8847A9D360 /* SPTDataLoader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SPTDataLoader-umbrella.h"; sourceTree = "<group>"; };
+		469B79C6344A8FE5CF129849EC6486F5 /* SPTDataLoaderCancellationTokenFactoryImplementation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderCancellationTokenFactoryImplementation.h; path = Sources/SPTDataLoader/SPTDataLoaderCancellationTokenFactoryImplementation.h; sourceTree = "<group>"; };
+		4B201BC22120FD0DD335ECC1DFA93ED1 /* SPTDataLoaderServerTrustPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTDataLoaderServerTrustPolicy.m; path = Sources/SPTDataLoader/SPTDataLoaderServerTrustPolicy.m; sourceTree = "<group>"; };
+		51BD5430BCECF81EC22D1EE313D50EAE /* SPTDataLoaderRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderRequest.h; path = include/SPTDataLoader/SPTDataLoaderRequest.h; sourceTree = "<group>"; };
+		546F98656A949D1504A225D8FA6B8854 /* Pods-DataLoader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DataLoader-dummy.m"; sourceTree = "<group>"; };
+		58AEA5952A49E5159B065954E765C6C0 /* SPTDataLoaderConsumptionObserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderConsumptionObserver.h; path = include/SPTDataLoader/SPTDataLoaderConsumptionObserver.h; sourceTree = "<group>"; };
+		5F0D447DC342FB5F026D0184C696C9F8 /* Pods-DataLoaderTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DataLoaderTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6005A8D4E0C8416BFDA24376D61CFEAC /* SPTDataLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTDataLoader.m; path = Sources/SPTDataLoader/SPTDataLoader.m; sourceTree = "<group>"; };
+		60C713BB9D18631ADDAA8EE14F2F5509 /* SPTDataLoaderResolverAddress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderResolverAddress.h; path = Sources/SPTDataLoader/SPTDataLoaderResolverAddress.h; sourceTree = "<group>"; };
+		642EC73C6B49E71FD22F622B73A281E9 /* SPTDataLoaderFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTDataLoaderFactory.m; path = Sources/SPTDataLoader/SPTDataLoaderFactory.m; sourceTree = "<group>"; };
+		64C4AE67C4E639C97F481737B744A951 /* SPTDataLoader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SPTDataLoader.debug.xcconfig; sourceTree = "<group>"; };
+		6B4AB70D7A0E25F01605AE118A7E0892 /* Pods-DataLoaderTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DataLoaderTests.modulemap"; sourceTree = "<group>"; };
+		6C630973FC886AAC5FB59DCE05FF8A13 /* Pods-DataLoader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DataLoader.modulemap"; sourceTree = "<group>"; };
+		732EF66FB3F007B6FCC0625C1E375E96 /* SPTDataLoaderRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTDataLoaderRequest.m; path = Sources/SPTDataLoader/SPTDataLoaderRequest.m; sourceTree = "<group>"; };
+		78E2A4256A8FB4133617A7E006A833BB /* SPTDataLoaderRateLimiter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTDataLoaderRateLimiter.m; path = Sources/SPTDataLoader/SPTDataLoaderRateLimiter.m; sourceTree = "<group>"; };
+		7A7048819A145EBF307A0B5EE7B223BD /* Pods-DataLoaderTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DataLoaderTests-dummy.m"; sourceTree = "<group>"; };
+		7EBC0D9A5AA879F87C1112192E2D682F /* SPTDataLoaderAuthoriser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderAuthoriser.h; path = include/SPTDataLoader/SPTDataLoaderAuthoriser.h; sourceTree = "<group>"; };
+		7EE3C4A8FD9E0956BD85C0AD5F913A12 /* SPTDataLoaderFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderFactory.h; path = include/SPTDataLoader/SPTDataLoaderFactory.h; sourceTree = "<group>"; };
+		907C826C7F74B16CF71829B779326879 /* SPTDataLoaderServerTrustPolicy+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SPTDataLoaderServerTrustPolicy+Private.h"; path = "Sources/SPTDataLoader/SPTDataLoaderServerTrustPolicy+Private.h"; sourceTree = "<group>"; };
+		952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		960A2600B1244B5619D91D29C051ED2B /* SPTDataLoaderBlockWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderBlockWrapper.h; path = include/SPTDataLoader/SPTDataLoaderBlockWrapper.h; sourceTree = "<group>"; };
+		9925D140702BC6DC36E8149012867EC8 /* SPTDataLoaderService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderService.h; path = include/SPTDataLoader/SPTDataLoaderService.h; sourceTree = "<group>"; };
+		9AB9E5311B7087452ED44C0842CFEEBC /* SPTDataLoader-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SPTDataLoader-Info.plist"; sourceTree = "<group>"; };
+		9C92602107EA4D6216BAE78F721ECDA4 /* SPTDataLoader-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SPTDataLoader-prefix.pch"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A5A4373438D10C4741414FA94F21F6E6 /* SPTDataLoader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SPTDataLoader-dummy.m"; sourceTree = "<group>"; };
+		A8EB7A4663D752C743B573E63F659238 /* Pods-DataLoader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DataLoader.release.xcconfig"; sourceTree = "<group>"; };
+		AB4EBBAC25E020FF55345A34E3A339E2 /* Pods-DataLoaderTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DataLoaderTests-Info.plist"; sourceTree = "<group>"; };
+		ACA7AE8AA7A1A45199E8DB1D95FFEF0C /* SPTDataLoaderImplementation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderImplementation.h; path = include/SPTDataLoader/SPTDataLoaderImplementation.h; sourceTree = "<group>"; };
+		AEA5548ADDA8F5E4498EED4201D4F21D /* Pods-DataLoaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DataLoaderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AEEF9B4EE20784CF85567978A008DF40 /* SPTDataLoaderRequest+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SPTDataLoaderRequest+Private.h"; path = "Sources/SPTDataLoader/SPTDataLoaderRequest+Private.h"; sourceTree = "<group>"; };
+		B07D14C0D53C8271840C98373D96C972 /* SPTDataLoaderResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTDataLoaderResponse.m; path = Sources/SPTDataLoader/SPTDataLoaderResponse.m; sourceTree = "<group>"; };
+		B1ED6FE134954055312376FEE2B9F0DA /* Pods-DataLoader-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DataLoader-Info.plist"; sourceTree = "<group>"; };
+		B23766E0D610460E458512A0E6FD4B4F /* SPTDataLoaderCancellationTokenImplementation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTDataLoaderCancellationTokenImplementation.m; path = Sources/SPTDataLoader/SPTDataLoaderCancellationTokenImplementation.m; sourceTree = "<group>"; };
+		B2C7301BE91E8E0A7AB0B0D6F0150814 /* SPTDataLoaderImplementation+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SPTDataLoaderImplementation+Private.h"; path = "Sources/SPTDataLoader/SPTDataLoaderImplementation+Private.h"; sourceTree = "<group>"; };
+		B6C5073F5034A98D9A621D713669DD6E /* SPTDataLoaderServiceSessionSelector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTDataLoaderServiceSessionSelector.m; path = Sources/SPTDataLoader/SPTDataLoaderServiceSessionSelector.m; sourceTree = "<group>"; };
+		BE806706372FAD281E355C9AF3D5F3D2 /* SPTDataLoaderService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTDataLoaderService.m; path = Sources/SPTDataLoader/SPTDataLoaderService.m; sourceTree = "<group>"; };
+		BEB5C70573BDA09A3E08909A8D869750 /* SPTDataLoaderService+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SPTDataLoaderService+Private.h"; path = "Sources/SPTDataLoader/SPTDataLoaderService+Private.h"; sourceTree = "<group>"; };
+		BEDCAD63B5E79FD751E9EFC3403DB121 /* SPTDataLoaderCancellationTokenFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderCancellationTokenFactory.h; path = Sources/SPTDataLoader/SPTDataLoaderCancellationTokenFactory.h; sourceTree = "<group>"; };
+		C3B2A0B779CE31153B2C0D8A7F8DC7FE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		C65C1884D7837B93881D16168CFCC70B /* SPTDataLoaderExponentialTimer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTDataLoaderExponentialTimer.m; path = Sources/SPTDataLoader/SPTDataLoaderExponentialTimer.m; sourceTree = "<group>"; };
+		C8EA80B3EACDE59AC9097FA679BBDE34 /* SPTDataLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoader.h; path = include/SPTDataLoader/SPTDataLoader.h; sourceTree = "<group>"; };
+		C9F6F537C99C26D82DAFB3C782305FA2 /* Pods_DataLoaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DataLoaderTests.framework; path = "Pods-DataLoaderTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC1BE0EBCA18297E064A887D01DC65F3 /* SPTDataLoaderResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderResponse.h; path = include/SPTDataLoader/SPTDataLoaderResponse.h; sourceTree = "<group>"; };
+		CE3014388DB0967FB1DF84DE58A65DC2 /* SPTDataLoaderRequestTaskHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderRequestTaskHandler.h; path = Sources/SPTDataLoader/SPTDataLoaderRequestTaskHandler.h; sourceTree = "<group>"; };
+		D66AD52F6C9CD78363D13AAE367E8623 /* Pods-DataLoader-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DataLoader-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D99FB6C34CDB2199CB06A9AC29E948B6 /* SPTDataLoaderServerTrustPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderServerTrustPolicy.h; path = include/SPTDataLoader/SPTDataLoaderServerTrustPolicy.h; sourceTree = "<group>"; };
+		DAB90DAFDEB8167C413861AD4FA16E36 /* Pods-DataLoader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DataLoader-umbrella.h"; sourceTree = "<group>"; };
+		DD803D9F15CC7318E2778740F358DBE9 /* SPTDataLoaderRateLimiter+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SPTDataLoaderRateLimiter+Private.h"; path = "Sources/SPTDataLoader/SPTDataLoaderRateLimiter+Private.h"; sourceTree = "<group>"; };
+		E26871A6E31AF3B353C265C69644D945 /* SPTDataLoaderFactory+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SPTDataLoaderFactory+Private.h"; path = "Sources/SPTDataLoader/SPTDataLoaderFactory+Private.h"; sourceTree = "<group>"; };
+		E481CF4269B9FE011B791D4D1B94C747 /* SPTDataLoaderRateLimiter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderRateLimiter.h; path = include/SPTDataLoader/SPTDataLoaderRateLimiter.h; sourceTree = "<group>"; };
+		E62789F99A507967B34192ABA0469E78 /* SPTDataLoaderTimeProviderImplementation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderTimeProviderImplementation.h; path = Sources/SPTDataLoader/SPTDataLoaderTimeProviderImplementation.h; sourceTree = "<group>"; };
+		E67A0FE3E9A5EC149FD1DDC8CF5A8CBF /* SPTDataLoaderResolver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderResolver.h; path = include/SPTDataLoader/SPTDataLoaderResolver.h; sourceTree = "<group>"; };
+		E80E8A77E188E928FF688A9C0D98A143 /* SPTDataLoaderRequestResponseHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderRequestResponseHandler.h; path = Sources/SPTDataLoader/SPTDataLoaderRequestResponseHandler.h; sourceTree = "<group>"; };
+		EC80290F8DBA69DD79505FAB6FB49618 /* NSDictionary+HeaderSize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+HeaderSize.h"; path = "Sources/SPTDataLoader/NSDictionary+HeaderSize.h"; sourceTree = "<group>"; };
+		ED9B23DB94718E91989B44F74F8309E3 /* SPTDataLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SPTDataLoader.framework; path = SPTDataLoader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE0629F9E187000CBBF15AD324197DC8 /* Pods_DataLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DataLoader.framework; path = "Pods-DataLoader.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F426680B6BDB5A88A088285C4D9D7EB4 /* SPTDataLoaderDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderDelegate.h; path = include/SPTDataLoader/SPTDataLoaderDelegate.h; sourceTree = "<group>"; };
+		F61B89D172B344BA4DF0FC8C1F81D498 /* SPTDataLoaderServiceSessionSelector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderServiceSessionSelector.h; path = Sources/SPTDataLoader/SPTDataLoaderServiceSessionSelector.h; sourceTree = "<group>"; };
+		F79ADD1F0EF1B441F587AE52F5ED5A77 /* SPTDataLoaderExponentialTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTDataLoaderExponentialTimer.h; path = include/SPTDataLoader/SPTDataLoaderExponentialTimer.h; sourceTree = "<group>"; };
+		F7AF7607832762C2E686C57E7A613FD4 /* SPTDataLoader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SPTDataLoader.release.xcconfig; sourceTree = "<group>"; };
+		F9182D110FAEC0D8DF3B13C9C3324FAE /* SPTDataLoaderResolver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTDataLoaderResolver.m; path = Sources/SPTDataLoader/SPTDataLoaderResolver.m; sourceTree = "<group>"; };
+		FDADE1DAFA6367927AD1BB8736EB5521 /* Pods-DataLoaderTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DataLoaderTests-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9050794D89C0481471F3BB9EFA69ED96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A92D094B91E75ECBECC391AF487C8D3E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C320FBA3E2A8DDB6F5AEAE58B0A3730B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6924BFFF4D106693E3D73A4A3D473FF5 /* Foundation.framework in Frameworks */,
+				245D1715F8C5215DFC2765129DA05272 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F30FFAE3798F266CED0745931DFFDDFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AD93AD664378659B1038715EB117F8D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CE426AC267333500FABE7BA0A5A42A0 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B0B5F5AA8C6AAD206F13098954F376D /* Pods-DataLoaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B4AB70D7A0E25F01605AE118A7E0892 /* Pods-DataLoaderTests.modulemap */,
+				5F0D447DC342FB5F026D0184C696C9F8 /* Pods-DataLoaderTests-acknowledgements.markdown */,
+				FDADE1DAFA6367927AD1BB8736EB5521 /* Pods-DataLoaderTests-acknowledgements.plist */,
+				7A7048819A145EBF307A0B5EE7B223BD /* Pods-DataLoaderTests-dummy.m */,
+				AB4EBBAC25E020FF55345A34E3A339E2 /* Pods-DataLoaderTests-Info.plist */,
+				3953B2352C1CAD9A22C57C7D0C3F0ED2 /* Pods-DataLoaderTests-umbrella.h */,
+				AEA5548ADDA8F5E4498EED4201D4F21D /* Pods-DataLoaderTests.debug.xcconfig */,
+				214EDE5938715E5A0B35B07A4338D21E /* Pods-DataLoaderTests.release.xcconfig */,
+			);
+			name = "Pods-DataLoaderTests";
+			path = "Target Support Files/Pods-DataLoaderTests";
+			sourceTree = "<group>";
+		};
+		2B7D9FA8CC5D563E93BB40BDBAF1A5F2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EC80290F8DBA69DD79505FAB6FB49618 /* NSDictionary+HeaderSize.h */,
+				327F7DC24946CAEB72A479C3910C9519 /* NSDictionary+HeaderSize.m */,
+				C8EA80B3EACDE59AC9097FA679BBDE34 /* SPTDataLoader.h */,
+				6005A8D4E0C8416BFDA24376D61CFEAC /* SPTDataLoader.m */,
+				7EBC0D9A5AA879F87C1112192E2D682F /* SPTDataLoaderAuthoriser.h */,
+				960A2600B1244B5619D91D29C051ED2B /* SPTDataLoaderBlockWrapper.h */,
+				015A313D168DBD3144C247EDBD62D274 /* SPTDataLoaderBlockWrapper.m */,
+				053D9F8A9292A2EDEB1B87444E4BA723 /* SPTDataLoaderCancellationToken.h */,
+				BEDCAD63B5E79FD751E9EFC3403DB121 /* SPTDataLoaderCancellationTokenFactory.h */,
+				469B79C6344A8FE5CF129849EC6486F5 /* SPTDataLoaderCancellationTokenFactoryImplementation.h */,
+				0B63F4FEC9EA2BD89242E5A4E20D247E /* SPTDataLoaderCancellationTokenFactoryImplementation.m */,
+				0574D2F86C40FACDCB32EFAA52AC0C3E /* SPTDataLoaderCancellationTokenImplementation.h */,
+				B23766E0D610460E458512A0E6FD4B4F /* SPTDataLoaderCancellationTokenImplementation.m */,
+				58AEA5952A49E5159B065954E765C6C0 /* SPTDataLoaderConsumptionObserver.h */,
+				F426680B6BDB5A88A088285C4D9D7EB4 /* SPTDataLoaderDelegate.h */,
+				F79ADD1F0EF1B441F587AE52F5ED5A77 /* SPTDataLoaderExponentialTimer.h */,
+				C65C1884D7837B93881D16168CFCC70B /* SPTDataLoaderExponentialTimer.m */,
+				7EE3C4A8FD9E0956BD85C0AD5F913A12 /* SPTDataLoaderFactory.h */,
+				642EC73C6B49E71FD22F622B73A281E9 /* SPTDataLoaderFactory.m */,
+				E26871A6E31AF3B353C265C69644D945 /* SPTDataLoaderFactory+Private.h */,
+				ACA7AE8AA7A1A45199E8DB1D95FFEF0C /* SPTDataLoaderImplementation.h */,
+				B2C7301BE91E8E0A7AB0B0D6F0150814 /* SPTDataLoaderImplementation+Private.h */,
+				E481CF4269B9FE011B791D4D1B94C747 /* SPTDataLoaderRateLimiter.h */,
+				78E2A4256A8FB4133617A7E006A833BB /* SPTDataLoaderRateLimiter.m */,
+				DD803D9F15CC7318E2778740F358DBE9 /* SPTDataLoaderRateLimiter+Private.h */,
+				51BD5430BCECF81EC22D1EE313D50EAE /* SPTDataLoaderRequest.h */,
+				732EF66FB3F007B6FCC0625C1E375E96 /* SPTDataLoaderRequest.m */,
+				AEEF9B4EE20784CF85567978A008DF40 /* SPTDataLoaderRequest+Private.h */,
+				E80E8A77E188E928FF688A9C0D98A143 /* SPTDataLoaderRequestResponseHandler.h */,
+				CE3014388DB0967FB1DF84DE58A65DC2 /* SPTDataLoaderRequestTaskHandler.h */,
+				20EE8BB7935BF641A25F6E0F0D512599 /* SPTDataLoaderRequestTaskHandler.m */,
+				E67A0FE3E9A5EC149FD1DDC8CF5A8CBF /* SPTDataLoaderResolver.h */,
+				F9182D110FAEC0D8DF3B13C9C3324FAE /* SPTDataLoaderResolver.m */,
+				60C713BB9D18631ADDAA8EE14F2F5509 /* SPTDataLoaderResolverAddress.h */,
+				38AF22AC196E736C1AA8D4C24D9543E9 /* SPTDataLoaderResolverAddress.m */,
+				CC1BE0EBCA18297E064A887D01DC65F3 /* SPTDataLoaderResponse.h */,
+				B07D14C0D53C8271840C98373D96C972 /* SPTDataLoaderResponse.m */,
+				0CC11D2E6931284F567244923952DC9A /* SPTDataLoaderResponse+Private.h */,
+				D99FB6C34CDB2199CB06A9AC29E948B6 /* SPTDataLoaderServerTrustPolicy.h */,
+				4B201BC22120FD0DD335ECC1DFA93ED1 /* SPTDataLoaderServerTrustPolicy.m */,
+				907C826C7F74B16CF71829B779326879 /* SPTDataLoaderServerTrustPolicy+Private.h */,
+				9925D140702BC6DC36E8149012867EC8 /* SPTDataLoaderService.h */,
+				BE806706372FAD281E355C9AF3D5F3D2 /* SPTDataLoaderService.m */,
+				BEB5C70573BDA09A3E08909A8D869750 /* SPTDataLoaderService+Private.h */,
+				F61B89D172B344BA4DF0FC8C1F81D498 /* SPTDataLoaderServiceSessionSelector.h */,
+				B6C5073F5034A98D9A621D713669DD6E /* SPTDataLoaderServiceSessionSelector.m */,
+				164C862E6EB25A1548685102FD5E910F /* SPTDataLoaderTimeProvider.h */,
+				E62789F99A507967B34192ABA0469E78 /* SPTDataLoaderTimeProviderImplementation.h */,
+				160CAB7EC5919585E151A57A4D259DF0 /* SPTDataLoaderTimeProviderImplementation.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		4DB64227AFA678234F34DD03AFB1FAE0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E29EB7A0030327603AEC0B9938898222 /* Pods-DataLoader */,
+				2B0B5F5AA8C6AAD206F13098954F376D /* Pods-DataLoaderTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7AA30A38224F131D747A69947DF5820D /* SPTDataLoader */ = {
+			isa = PBXGroup;
+			children = (
+				2B7D9FA8CC5D563E93BB40BDBAF1A5F2 /* Core */,
+				DF845A6014916527227439ABD47BD20E /* Support Files */,
+			);
+			name = SPTDataLoader;
+			path = SPTDataLoader;
+			sourceTree = "<group>";
+		};
+		7CE426AC267333500FABE7BA0A5A42A0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */,
+				C3B2A0B779CE31153B2C0D8A7F8DC7FE /* Security.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CEAB25DB34A3DA2C80DDE54A1F5E29DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE0629F9E187000CBBF15AD324197DC8 /* Pods_DataLoader.framework */,
+				C9F6F537C99C26D82DAFB3C782305FA2 /* Pods_DataLoaderTests.framework */,
+				ED9B23DB94718E91989B44F74F8309E3 /* SPTDataLoader.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				E1AEB887AA2D21C7E46E3CE9E2617416 /* Pods */,
+				CEAB25DB34A3DA2C80DDE54A1F5E29DE /* Products */,
+				4DB64227AFA678234F34DD03AFB1FAE0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		DF845A6014916527227439ABD47BD20E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				20DCF9D0B9262BE4991CA6ABB12E4458 /* SPTDataLoader.modulemap */,
+				A5A4373438D10C4741414FA94F21F6E6 /* SPTDataLoader-dummy.m */,
+				9AB9E5311B7087452ED44C0842CFEEBC /* SPTDataLoader-Info.plist */,
+				9C92602107EA4D6216BAE78F721ECDA4 /* SPTDataLoader-prefix.pch */,
+				467A16658E56FFA6E9F04F8847A9D360 /* SPTDataLoader-umbrella.h */,
+				64C4AE67C4E639C97F481737B744A951 /* SPTDataLoader.debug.xcconfig */,
+				F7AF7607832762C2E686C57E7A613FD4 /* SPTDataLoader.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SPTDataLoader";
+			sourceTree = "<group>";
+		};
+		E1AEB887AA2D21C7E46E3CE9E2617416 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7AA30A38224F131D747A69947DF5820D /* SPTDataLoader */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E29EB7A0030327603AEC0B9938898222 /* Pods-DataLoader */ = {
+			isa = PBXGroup;
+			children = (
+				6C630973FC886AAC5FB59DCE05FF8A13 /* Pods-DataLoader.modulemap */,
+				D66AD52F6C9CD78363D13AAE367E8623 /* Pods-DataLoader-acknowledgements.markdown */,
+				292FDB5F4DDD2414D74C3E79575B20D2 /* Pods-DataLoader-acknowledgements.plist */,
+				546F98656A949D1504A225D8FA6B8854 /* Pods-DataLoader-dummy.m */,
+				1D81357A209B730956DC632E55424BED /* Pods-DataLoader-frameworks.sh */,
+				B1ED6FE134954055312376FEE2B9F0DA /* Pods-DataLoader-Info.plist */,
+				DAB90DAFDEB8167C413861AD4FA16E36 /* Pods-DataLoader-umbrella.h */,
+				01B8D186BCE0F152393F675905BBFD21 /* Pods-DataLoader.debug.xcconfig */,
+				A8EB7A4663D752C743B573E63F659238 /* Pods-DataLoader.release.xcconfig */,
+			);
+			name = "Pods-DataLoader";
+			path = "Target Support Files/Pods-DataLoader";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		377B7A4282EEB2A3F4399D9A2404B469 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				361E20941BDD87DE97B0EEB8A675A504 /* NSDictionary+HeaderSize.h in Headers */,
+				612D2B486DF94B38FB37F298236641B8 /* SPTDataLoader-umbrella.h in Headers */,
+				E13E2D8C85F266E2220EFC8BE5C9CD47 /* SPTDataLoader.h in Headers */,
+				79625C46D600B8984E7BFB3E947902F6 /* SPTDataLoaderAuthoriser.h in Headers */,
+				F792B0FA8BEEC198181B3762A7676E94 /* SPTDataLoaderBlockWrapper.h in Headers */,
+				028186FA7AC8EFB60CCCB9EEE144FE89 /* SPTDataLoaderCancellationToken.h in Headers */,
+				AD7B02B7DB87136FC8B422DAC1DC3B44 /* SPTDataLoaderCancellationTokenFactory.h in Headers */,
+				6E4623E48ADB194EB05D4C5A14B8D9AA /* SPTDataLoaderCancellationTokenFactoryImplementation.h in Headers */,
+				99EA6870DE9A9B0F7EF39470B4E0F666 /* SPTDataLoaderCancellationTokenImplementation.h in Headers */,
+				419F9D934D68EB830D0B451241CE73F6 /* SPTDataLoaderConsumptionObserver.h in Headers */,
+				905EDD32727A4B56E7A78F5BEE0D2254 /* SPTDataLoaderDelegate.h in Headers */,
+				1C5AC4561AD857851BCF19F15997BB4A /* SPTDataLoaderExponentialTimer.h in Headers */,
+				8FA87737A2DADDBD35FE87E0D71E4C4C /* SPTDataLoaderFactory+Private.h in Headers */,
+				3DCFD425C916C2CE2446D2F4900DEDC6 /* SPTDataLoaderFactory.h in Headers */,
+				0D0C839E1E4325CAC1A80565DF4DACBB /* SPTDataLoaderImplementation+Private.h in Headers */,
+				6E5ECB6F03B65E57BC18E90647E5D357 /* SPTDataLoaderImplementation.h in Headers */,
+				DD8FD6DB7C03F6FD99F321029388F84A /* SPTDataLoaderRateLimiter+Private.h in Headers */,
+				009F3783D8E5B37DC93AE90923F9926E /* SPTDataLoaderRateLimiter.h in Headers */,
+				FAEAA7E36215FBE1D6469E580E04C798 /* SPTDataLoaderRequest+Private.h in Headers */,
+				C86310914C9360BBFC8BEE8482008EA4 /* SPTDataLoaderRequest.h in Headers */,
+				E0B92057ABF7C1B1B04938B1CC0D8D63 /* SPTDataLoaderRequestResponseHandler.h in Headers */,
+				2B077562291BD169704BBB4E7142022A /* SPTDataLoaderRequestTaskHandler.h in Headers */,
+				F8B34FF2ECC7A8C1856CBFB1AC374459 /* SPTDataLoaderResolver.h in Headers */,
+				A3049EEADCD7650BB9E9BEFC9C546E01 /* SPTDataLoaderResolverAddress.h in Headers */,
+				DE1295708F34C65EF1FFA613A61947C8 /* SPTDataLoaderResponse+Private.h in Headers */,
+				DFAA408FE8045C02586F2C0C5F26A986 /* SPTDataLoaderResponse.h in Headers */,
+				34386C71A1737AE9EEA6336C4283257B /* SPTDataLoaderServerTrustPolicy+Private.h in Headers */,
+				E5F8FC813A88190FA9B5A4707EF30810 /* SPTDataLoaderServerTrustPolicy.h in Headers */,
+				D70EC4DB8F23A27126F859C49E6FACB7 /* SPTDataLoaderService+Private.h in Headers */,
+				0E003054B7F4CD99B01B2C372C58E346 /* SPTDataLoaderService.h in Headers */,
+				3B2F4E33CDDD8DB6F58BD8A76BFA3404 /* SPTDataLoaderServiceSessionSelector.h in Headers */,
+				78CF90B1422BC6DF42FB1CF5FD3EE04F /* SPTDataLoaderTimeProvider.h in Headers */,
+				B8B2AD055C37B6C6DF70DFBFD4E6DAF5 /* SPTDataLoaderTimeProviderImplementation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		804C9ABD9BA93AC82B8E169D8E5F5BCE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FBB9C46D0F0576C7A208386A88C0482 /* Pods-DataLoaderTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85A52A953320AB151F888DF8C2598022 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3733EBACBA37F500E477887A8E2CDC5F /* Pods-DataLoader-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2643A53B5099AF7B63FE53378462A695 /* SPTDataLoader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83430FC730B27B75AD4B63D1A98E6A29 /* Build configuration list for PBXNativeTarget "SPTDataLoader" */;
+			buildPhases = (
+				377B7A4282EEB2A3F4399D9A2404B469 /* Headers */,
+				04E6EC16B1AC294E8A1B9D5B7823BFEF /* Sources */,
+				C320FBA3E2A8DDB6F5AEAE58B0A3730B /* Frameworks */,
+				DD06C64E46BF2EF58149B0500BF2844C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SPTDataLoader;
+			productName = SPTDataLoader;
+			productReference = ED9B23DB94718E91989B44F74F8309E3 /* SPTDataLoader.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		851795C20F410A58D0E8FB7D4BF6143C /* Pods-DataLoaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA70F18601F665DDD43C32C705A16551 /* Build configuration list for PBXNativeTarget "Pods-DataLoaderTests" */;
+			buildPhases = (
+				804C9ABD9BA93AC82B8E169D8E5F5BCE /* Headers */,
+				8D54A63FD7EC329BA5393FD520517206 /* Sources */,
+				9050794D89C0481471F3BB9EFA69ED96 /* Frameworks */,
+				02AD1EC1E6DC61F070D9BF8157A5A15D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF2487BE2B275242FD8F83469E4F11DF /* PBXTargetDependency */,
+			);
+			name = "Pods-DataLoaderTests";
+			productName = "Pods-DataLoaderTests";
+			productReference = C9F6F537C99C26D82DAFB3C782305FA2 /* Pods_DataLoaderTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DD0C06C602609FC3AAF02D6F10FB00B7 /* Pods-DataLoader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 718374ED9C74B7C7C8C7FD6D15D234E6 /* Build configuration list for PBXNativeTarget "Pods-DataLoader" */;
+			buildPhases = (
+				85A52A953320AB151F888DF8C2598022 /* Headers */,
+				F76EE9AC3BAA49467F19D4D612363E80 /* Sources */,
+				F30FFAE3798F266CED0745931DFFDDFE /* Frameworks */,
+				6AE40DD06BAD66ED4944C8B14B0C3DE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9821490C078017922193FCF69C0075A8 /* PBXTargetDependency */,
+			);
+			name = "Pods-DataLoader";
+			productName = "Pods-DataLoader";
+			productReference = EE0629F9E187000CBBF15AD324197DC8 /* Pods_DataLoader.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = CEAB25DB34A3DA2C80DDE54A1F5E29DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD0C06C602609FC3AAF02D6F10FB00B7 /* Pods-DataLoader */,
+				851795C20F410A58D0E8FB7D4BF6143C /* Pods-DataLoaderTests */,
+				2643A53B5099AF7B63FE53378462A695 /* SPTDataLoader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		02AD1EC1E6DC61F070D9BF8157A5A15D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AE40DD06BAD66ED4944C8B14B0C3DE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD06C64E46BF2EF58149B0500BF2844C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04E6EC16B1AC294E8A1B9D5B7823BFEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3677304EF8A2F96FD712ED75795AC03F /* NSDictionary+HeaderSize.m in Sources */,
+				7920C6FA6E1BC8F159C2E142EC8F98DC /* SPTDataLoader-dummy.m in Sources */,
+				5D2761A502722B2002BF4830835BCB09 /* SPTDataLoader.m in Sources */,
+				FD1EA8D6EECC5E909E1002E7E59003AA /* SPTDataLoaderBlockWrapper.m in Sources */,
+				72F009315D8E350AFA9AC8DEECD540CE /* SPTDataLoaderCancellationTokenFactoryImplementation.m in Sources */,
+				D475F2D60FDA3CE489D1217B407D316E /* SPTDataLoaderCancellationTokenImplementation.m in Sources */,
+				84430D887B7B5DA09A5D6DFB14888EF1 /* SPTDataLoaderExponentialTimer.m in Sources */,
+				C7DF41949E340C0863CB428B00CA2185 /* SPTDataLoaderFactory.m in Sources */,
+				6BF45B0E7C375290A2EA0E8E0329D2F1 /* SPTDataLoaderRateLimiter.m in Sources */,
+				92C542C7EB385C8778B5F75C64A8F499 /* SPTDataLoaderRequest.m in Sources */,
+				335237FD28C4A74CE813ED463C093FF5 /* SPTDataLoaderRequestTaskHandler.m in Sources */,
+				FCD333E8982FAC990FE84E8B1E8ED759 /* SPTDataLoaderResolver.m in Sources */,
+				78F1F8D2506195C10C24EFA53CCFB564 /* SPTDataLoaderResolverAddress.m in Sources */,
+				2C0F97DC9C69080AD58D6913D4D525C2 /* SPTDataLoaderResponse.m in Sources */,
+				EE1B2011EAE6EC424EC0AF3886A32AB0 /* SPTDataLoaderServerTrustPolicy.m in Sources */,
+				61FBD44CF5E83BA9404A62C2298EB1A0 /* SPTDataLoaderService.m in Sources */,
+				44A84AA0136E48A5F308657236CC5644 /* SPTDataLoaderServiceSessionSelector.m in Sources */,
+				5F7EBCC8E5C6D9A34F89276DF02A70E8 /* SPTDataLoaderTimeProviderImplementation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D54A63FD7EC329BA5393FD520517206 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E739A68D338980064E907F9FDAD293F4 /* Pods-DataLoaderTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F76EE9AC3BAA49467F19D4D612363E80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F086C9EF0B56626F05F0441AB14D14F9 /* Pods-DataLoader-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9821490C078017922193FCF69C0075A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SPTDataLoader;
+			target = 2643A53B5099AF7B63FE53378462A695 /* SPTDataLoader */;
+			targetProxy = D4D1ECA7AA0D30F80B07D282AD29580E /* PBXContainerItemProxy */;
+		};
+		FF2487BE2B275242FD8F83469E4F11DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-DataLoader";
+			target = DD0C06C602609FC3AAF02D6F10FB00B7 /* Pods-DataLoader */;
+			targetProxy = 4130F9D558A53C4208C6BCED9A6E0920 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		08AFA8604CFF9AEF6D56F6A0C2B9DE12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64C4AE67C4E639C97F481737B744A951 /* SPTDataLoader.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SPTDataLoader/SPTDataLoader-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SPTDataLoader/SPTDataLoader-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SPTDataLoader/SPTDataLoader.modulemap";
+				PRODUCT_MODULE_NAME = SPTDataLoader;
+				PRODUCT_NAME = SPTDataLoader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		231528393B7084E13F97FF9EF804A1C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		353D2EB3545D27343B51B709D9C0420B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		35B49E34309F948B8A48D0CB5E84A183 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEA5548ADDA8F5E4498EED4201D4F21D /* Pods-DataLoaderTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DataLoaderTests/Pods-DataLoaderTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DataLoaderTests/Pods-DataLoaderTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		53E1C4B9D590CF50659E85DD0FA37A86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01B8D186BCE0F152393F675905BBFD21 /* Pods-DataLoader.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DataLoader/Pods-DataLoader-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DataLoader/Pods-DataLoader.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		675F4D1933FDD91EBC88D63DC55E0849 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7AF7607832762C2E686C57E7A613FD4 /* SPTDataLoader.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SPTDataLoader/SPTDataLoader-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SPTDataLoader/SPTDataLoader-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SPTDataLoader/SPTDataLoader.modulemap";
+				PRODUCT_MODULE_NAME = SPTDataLoader;
+				PRODUCT_NAME = SPTDataLoader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B9918CAF841297F54C51A2E53BF13F25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8EB7A4663D752C743B573E63F659238 /* Pods-DataLoader.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DataLoader/Pods-DataLoader-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DataLoader/Pods-DataLoader.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C5D99A2453795A94641ABD6E2D4C4520 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 214EDE5938715E5A0B35B07A4338D21E /* Pods-DataLoaderTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DataLoaderTests/Pods-DataLoaderTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DataLoaderTests/Pods-DataLoaderTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				231528393B7084E13F97FF9EF804A1C0 /* Debug */,
+				353D2EB3545D27343B51B709D9C0420B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		718374ED9C74B7C7C8C7FD6D15D234E6 /* Build configuration list for PBXNativeTarget "Pods-DataLoader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53E1C4B9D590CF50659E85DD0FA37A86 /* Debug */,
+				B9918CAF841297F54C51A2E53BF13F25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83430FC730B27B75AD4B63D1A98E6A29 /* Build configuration list for PBXNativeTarget "SPTDataLoader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08AFA8604CFF9AEF6D56F6A0C2B9DE12 /* Debug */,
+				675F4D1933FDD91EBC88D63DC55E0849 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA70F18601F665DDD43C32C705A16551 /* Build configuration list for PBXNativeTarget "Pods-DataLoaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35B49E34309F948B8A48D0CB5E84A183 /* Debug */,
+				C5D99A2453795A94641ABD6E2D4C4520 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

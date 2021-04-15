@@ -1,0 +1,18 @@
+PODS:
+  - SPTDataLoader (2.1.1):
+    - SPTDataLoader/Core (= 2.1.1)
+  - SPTDataLoader/Core (2.1.1)
+
+DEPENDENCIES:
+  - SPTDataLoader (~> 2.1)
+
+SPEC REPOS:
+  trunk:
+    - SPTDataLoader
+
+SPEC CHECKSUMS:
+  SPTDataLoader: 2cecf59a7a790572633fe6abba4b2d39bc2a69ba
+
+PODFILE CHECKSUM: c0da8844ccc0adcbc1cd224e28d2e6da8a1ed1b8
+
+COCOAPODS: 1.10.1

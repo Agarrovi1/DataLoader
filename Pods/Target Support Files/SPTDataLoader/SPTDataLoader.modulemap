@@ -1,0 +1,6 @@
+framework module SPTDataLoader {
+  umbrella header "SPTDataLoader-umbrella.h"
+
+  export *
+  module * { export * }
+}
