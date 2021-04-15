@@ -12,11 +12,11 @@ import SPTDataLoader
 class ViewController: UIViewController {
     
     //var loader = SPTDataLoader.init()
-    var rateLimiter = SPTDataLoaderRateLimiter.init()
-    var resolver = SPTDataLoaderResolver.init()
-    var service = SPTDataLoaderService.init()
-    var sptRequest = SPTDataLoaderRequest.init()
-    var response = SPTDataLoaderResponse.init()
+//    var rateLimiter = SPTDataLoaderRateLimiter.init()
+//    var resolver = SPTDataLoaderResolver.init()
+//    var service = SPTDataLoaderService.init()
+//    var sptRequest = SPTDataLoaderRequest.init()
+//    var response = SPTDataLoaderResponse.init()
     var factory = SPTDataLoaderFactory()
     
     
@@ -24,6 +24,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //service = SPTDataLoaderService.init(userAgent: "Spotify-Demo", rateLimiter: rateLimiter, resolver: resolver, customURLProtocolClasses: nil)
+        var rateLimiter = SPTDataLoaderRateLimiter.init()
+        var resolver = SPTDataLoaderResolver.init()
+        var service = SPTDataLoaderService.init()
+        var sptRequest = SPTDataLoaderRequest.init()
+        var response = SPTDataLoaderResponse.init()
+        
         service = SPTDataLoaderService.init(userAgent: nil, rateLimiter: nil, resolver: nil, customURLProtocolClasses: nil)
         
             
