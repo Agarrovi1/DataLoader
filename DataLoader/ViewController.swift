@@ -36,8 +36,8 @@ class ViewController: UIViewController {
         service = SPTDataLoaderService.init(userAgent: nil, rateLimiter: nil, resolver: nil, customURLProtocolClasses: nil)
         
             
-        
-        let url = URL(string: "https://restcountries.eu/rest/v2/all")!
+        let url = URL(string: "https://pokeapi.co/api/v2/pokemon/lucario")!
+        //let url = URL(string: "https://restcountries.eu/rest/v2/all")!
         
         
         sptRequest = SPTDataLoaderRequest.init(url: url, sourceIdentifier: nil)
