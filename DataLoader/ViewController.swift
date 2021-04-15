@@ -11,12 +11,13 @@ import SPTDataLoader
 
 class ViewController: UIViewController {
     
-    var loader = SPTDataLoader.init()
+    //var loader = SPTDataLoader.init()
     var rateLimiter = SPTDataLoaderRateLimiter.init()
     var resolver = SPTDataLoaderResolver.init()
     var service = SPTDataLoaderService.init()
     var sptRequest = SPTDataLoaderRequest.init()
     var response = SPTDataLoaderResponse.init()
+    var factory = SPTDataLoaderFactory()
     
     
 
@@ -34,9 +35,9 @@ class ViewController: UIViewController {
         
         //var authoriser = SPTDataLoaderAuthoriser()
         
-        let factory = service.createDataLoaderFactory(with: nil)
+        factory = service.createDataLoaderFactory(with: nil)
         
-        loader = factory.createDataLoader()
+        let loader = factory.createDataLoader()
         
         loader.delegate = self
         
